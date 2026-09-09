@@ -25,6 +25,6 @@ A lightweight Express.js REST API for managing users, built as a learning projec
 
 ## Conventions
 
-- Route files should not directly access data; call store methods instead
-- Always validate required fields in POST requests and return 400 if missing
-- Return 404 with `{ error: "..." }` for missing resources
+- Use store methods for data access, not direct data access in routes
+- Use 400 status for missing required fields in POST requests, not 500 or silence
+- Use 404 with `{ error: "..." }` for missing resources, not other status codes

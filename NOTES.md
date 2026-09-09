@@ -30,3 +30,10 @@ I deliberately left out:
 - `git reset --hard` — destructive; discards uncommitted changes without recovery
 
 Without the deny rules, Claude could accidentally expose secrets or destroy work with a force-push. The test command being allowed saves time during active development.
+
+## Claude Code Environment
+
+Verified during setup:
+- **claude --version**: Haiku 4.5 (claude-haiku-4-5-20251001), knowledge cutoff February 2025
+- **/memory**: Memory system available at `C:\Users\rosen\.claude\projects\C--Users-rosen-Learning-Claude-Code-claude-set-up-claude-on-a-project\memory\` with persistent file-based storage across sessions
+- **/permissions**: Permissions configured in `.claude/settings.json` with allow/ask/deny rules for npm, git, and file access as documented above
